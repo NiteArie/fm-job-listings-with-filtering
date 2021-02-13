@@ -6,4 +6,15 @@
 
 body {
     font-family: "Spartan", sans-serif;
+    font-size: 15px;
+}
+
+/* Header */
+
+.header {
+    height: 150px;
+    background-image: url("../images/bg-header-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(180, 29%, 50%);
 }
