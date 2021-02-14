@@ -97,13 +97,17 @@ body {
     list-style-type: disc;
 }
 
-.job__type::before,
-.job__location::before {
-    
-}
-
 /* Job Labels */
 
 .job__labels {
     display: flex;
+}
+
+.job__label {
+    margin-left: 15px;
+    padding: 10px;
+    color: hsl(180, 29%, 50%);
+    font-weight: bold;
+    font-size: 13px;
+    background-color: hsl(180, 52%, 96%);
 }
