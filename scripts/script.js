@@ -40,7 +40,7 @@
         var jobCardContainerElement = document.createElement("section");
         var jobAboutContainerElement = document.createElement("div");
 
-        var jobLabelContainerElement = document.createElement("div");
+        var jobLabelContainerElement = document.createElement("ul");
 
         var jobLogoElement = document.createElement("img");
         var jobInfoContainerElement = document.createElement("div");
@@ -97,6 +97,19 @@
                 jobFeaturedLabelElement.textContent = "FEATURED";
                 jobProfileContainerElement.appendChild(jobFeaturedLabelElement);
             }
+        }
+
+        {
+            [role, level, ...languages, ...tools].forEach((label) => {
+
+                var jobLabelElement = document.createElement("li");
+
+                jobLabelElement.classList.add("job__label");
+
+                jobLabelElement.textContent = label;
+
+                jobLabelContainerElement.appendChild(jobLabelElement);
+            })
         }
 
 
