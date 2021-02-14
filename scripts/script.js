@@ -78,7 +78,35 @@
         jobPostingDateElement.textContent = postedAt;
         jobPostingTypeElement.textContent = contract;
         jobPostingLocationElement.textContent = location;
-        
+
+
+
+        jobProfileContainerElement.append(jobCompanyElement);
+
+        {
+            if (isNew) {
+                let jobNewLabelElement = document.createElement("p");
+                jobNewLabelElement.classList.add("job__special", "job__special--new");
+                jobNewLabelElement.textContent = "NEW!";
+                jobProfileContainerElement.appendChild(jobNewLabelElement);
+            }
+            
+            if (isFeatured) {
+                let jobFeaturedLabelElement = document.createElement("p");
+                jobFeaturedLabelElement.classList.add("job__special", "job__special--featured");
+                jobFeaturedLabelElement.textContent = "FEATURED";
+                jobProfileContainerElement.appendChild(jobFeaturedLabelElement);
+            }
+        }
+
+
+        jobPostingContainerElement.append(
+            jobPostingDateElement,
+            jobPostingTypeElement,
+            jobPostingLocationElement,
+        )
+
+        jobInfoContainerElement.append(jobProfileContainerElement, jobTitleElement, jobPostingContainerElement);
 
         jobAboutContainerElement.append(jobLogoElement, jobInfoContainerElement);
 
