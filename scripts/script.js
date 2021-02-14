@@ -24,7 +24,18 @@
     }
 
     function createJobElements({
-
+        company,
+        logo,
+        new: isNew,
+        featured: isFeatured,
+        position,
+        role,
+        level,
+        postedAt,
+        contract,
+        location,
+        languages,
+        tools,
     }) {
         var jobCardContainerElement = document.createElement("section");
         var jobAboutContainerElement = document.createElement("div");
@@ -57,7 +68,16 @@
         jobPostingTypeElement.classList.add("job__type");
         jobPostingLocationElement.classList.add("job__location");
 
+        jobLogoElement.src = logo;
+        jobLogoElement.alt = company;
+
+        jobCompanyElement.textContent = company;
         
+        jobTitleElement.textContent = position;
+
+        jobPostingDateElement.textContent = postedAt;
+        jobPostingTypeElement.textContent = contract;
+        jobPostingLocationElement.textContent = location;
         
 
         jobAboutContainerElement.append(jobLogoElement, jobInfoContainerElement);
