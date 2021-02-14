@@ -58,7 +58,7 @@
         jobLabelContainerElement.classList.add("job__labels");
 
         jobLogoElement.classList.add("job__image");
-        jobInfoContainerElement.classList.add("jog__info");
+        jobInfoContainerElement.classList.add("job__info");
         jobProfileContainerElement.classList.add("job__profile");
         jobCompanyElement.classList.add("job__company");
 
