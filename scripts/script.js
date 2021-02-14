@@ -47,7 +47,7 @@
         var jobProfileContainerElement = document.createElement("div");
         var jobCompanyElement = document.createElement("p");
         
-        var jobTitleElement = document.createElement("h2");
+        var jobTitleElement = document.createElement("a");
         var jobPostingContainerElement = document.createElement("ul");
         var jobPostingDateElement = document.createElement("li");
         var jobPostingTypeElement = document.createElement("li");
@@ -74,6 +74,7 @@
         jobCompanyElement.textContent = company;
         
         jobTitleElement.textContent = position;
+        jobTitleElement.href = "#";
 
         jobPostingDateElement.textContent = postedAt;
         jobPostingTypeElement.textContent = contract;
@@ -106,9 +107,15 @@
 
                 var jobLabelElement = document.createElement("li");
 
-                jobLabelElement.classList.add("job__label");
+                var jobLabelLinkElement = document.createElement("a");
 
-                jobLabelElement.textContent = label;
+                jobLabelElement.classList.add("job__label");
+                jobLabelLinkElement.classList.add("job__link");
+
+                jobLabelLinkElement.textContent = label;
+                jobLabelLinkElement.href = "#";
+
+                jobLabelElement.appendChild(jobLabelLinkElement);
 
                 jobLabelContainerElement.appendChild(jobLabelElement);
             })

@@ -80,9 +80,16 @@ body {
 }
 
 .job__title {
+    display: block;
     margin: 10px 0 15px;
+    color: hsl(180, 14%, 20%);
     font-weight: bold;
     font-size: 16px;
+    text-decoration: none;
+}
+
+.job__title:hover {
+    color:hsl(180, 29%, 50%);
 }
 
 .job__posting {
@@ -110,9 +117,20 @@ body {
 
 .job__label {
     margin-left: 15px;
+    background-color: hsl(180, 52%, 96%);
+}
+
+.job__link {
+    display: block;
     padding: 10px;
     color: hsl(180, 29%, 50%);
     font-weight: bold;
     font-size: 13px;
-    background-color: hsl(180, 52%, 96%);
+    text-decoration: none;
+    transition: all 200ms ease-out;
+}
+
+.job__link:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: hsl(180, 31%, 95%);
 }
