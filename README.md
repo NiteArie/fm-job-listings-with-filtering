@@ -1,5 +1,9 @@
 # fm-job-listings-with-filtering (Job Listing with Filtering)
 
+## Live Preview
+
+Live Preview: [https://nitearie.github.io/fm-job-listings-with-filtering/](https://nitearie.github.io/fm-job-listings-with-filtering/)
+
 ## Design
 
 > Desktop
