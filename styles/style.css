@@ -7,6 +7,7 @@
 body {
     font-family: "Spartan", sans-serif;
     font-size: 15px;
+    background-color: hsl(180, 52%, 96%);
 }
 
 /* Header */
@@ -17,4 +18,92 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: hsl(180, 29%, 50%);
+}
+
+.jobs {
+    max-width: 1200px;
+    margin: 60px auto 100px;
+}
+
+.job {
+    margin-bottom: 30px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, .2);
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* Job About */
+
+.job__about {
+    display: flex;
+    align-items: center;
+}
+
+.job__info {
+    margin-left: 20px;
+}
+
+.job__profile {
+    display: flex;
+    align-items: center;
+}
+
+.job__company {
+    color:hsl(180, 29%, 50%);
+    font-weight: bold;
+}
+
+.job__special {
+    position: relative;
+    margin-left: 10px;
+    padding: 6px;
+    font-size: 10px;
+    color: hsl(180, 31%, 95%);
+    border-radius: 10px;
+}
+
+.job__special--new {
+    background-color: hsl(180, 29%, 50%);
+}
+
+.job__special--featured {
+    background-color: hsl(180, 14%, 20%);
+}
+
+.job__title {
+    margin: 10px 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.job__posting {
+    display: flex;
+}
+
+.job__date,
+.job__type,
+.job__location {
+    margin-right: 15px;
+    color: hsl(180, 8%, 52%);
+}
+
+.job__type,
+.job__location {
+    margin-left: 10px;
+    list-style-type: disc;
+}
+
+.job__type::before,
+.job__location::before {
+    
+}
+
+/* Job Labels */
+
+.job__labels {
+    display: flex;
 }

@@ -114,7 +114,6 @@
             })
         }
 
-
         jobPostingContainerElement.append(
             jobPostingDateElement,
             jobPostingTypeElement,
