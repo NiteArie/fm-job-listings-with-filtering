@@ -96,6 +96,8 @@
                 jobFeaturedLabelElement.classList.add("job__special", "job__special--featured");
                 jobFeaturedLabelElement.textContent = "FEATURED";
                 jobProfileContainerElement.appendChild(jobFeaturedLabelElement);
+
+                jobCardContainerElement.classList.add("job--featured");
             }
         }
 
