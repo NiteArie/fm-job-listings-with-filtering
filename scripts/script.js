@@ -162,7 +162,7 @@
 
         labelLinkElement.textContent = label;
 
-        labelButtonElement.innerHTML = "&#10005;";
+        labelButtonElement.innerHTML = "&#x2716;";
 
         function removeLabel() {
 
