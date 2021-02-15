@@ -31,9 +31,12 @@ body {
     max-width: 1000px;
     width: 100%;
     margin: auto auto;
-    padding: 25px 30px;
+    padding: 15px 30px;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     background-color: white;
     box-shadow: 0 5px 10px hsla(0, 0%, 0%, .2);
     border-radius: 5px;
@@ -42,6 +45,36 @@ body {
 .filter--hidden {
     display: none;
 }
+
+.filter__labels {
+    display: flex;
+}
+
+.filter__label {
+    margin-right: 15px;
+    display: flex;
+    /* align-items: center; */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.filter__link {
+    padding: 10px;
+    color: hsl(180, 29%, 50%);
+    font-weight: bold;
+    font-size: 13px;
+    background-color: hsl(180, 31%, 95%);
+}
+
+.filter__close {
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+    border: 0;
+}
+
 
 .filter__clear {
     font-size: 14px;
