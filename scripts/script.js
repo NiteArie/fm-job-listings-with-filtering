@@ -1,6 +1,8 @@
 (() => {
 
     const jobsContainerElement = document.querySelector(".jobs");
+    const filterContainerElement = document.querySelector(".filter");
+    const filterLabelsContainerElement = document.querySelector(".filter__labels");
 
     const URL = "https://nitearie.github.io/fm-job-listings-with-filtering/data.json";
 
@@ -115,6 +117,10 @@
                 jobLabelLinkElement.textContent = label;
                 jobLabelLinkElement.href = "#";
 
+                jobLabelLinkElement.addEventListener("click", () => {
+                    showFilterContainerElement();
+                })
+
                 jobLabelElement.appendChild(jobLabelLinkElement);
 
                 jobLabelContainerElement.appendChild(jobLabelElement);
@@ -134,6 +140,14 @@
         jobCardContainerElement.append(jobAboutContainerElement, jobLabelContainerElement);
 
         return jobCardContainerElement;
+    }
+
+    function showFilterContainerElement() {
+        filterContainerElement.classList.remove("filter--hidden");
+    }
+
+    function hideFilterContainerElement() {
+        filterContainerElement.classList.add("filter--hidden");
     }
 
 })();
