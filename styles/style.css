@@ -20,6 +20,42 @@ body {
     background-color: hsl(180, 29%, 50%);
 }
 
+/* Filter */
+
+.filter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 110px;
+    
+    max-width: 1000px;
+    width: 100%;
+    margin: auto auto;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 5px 10px hsla(0, 0%, 0%, .2);
+    border-radius: 5px;
+}
+
+.filter--hidden {
+    display: none;
+}
+
+.filter__clear {
+    font-size: 14px;
+    text-decoration: none;
+    color: hsl(180, 29%, 50%);
+    font-weight: bold;
+}
+
+.filter__clear:hover {
+    text-decoration: underline;
+}
+
+/* Jobs */
+
 .jobs {
     max-width: 1000px;
     margin: 60px auto 100px;
