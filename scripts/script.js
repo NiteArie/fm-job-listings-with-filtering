@@ -119,6 +119,7 @@
 
                 jobLabelLinkElement.addEventListener("click", () => {
                     showFilterContainerElement();
+                    addLabelToFilter(label);
                 })
 
                 jobLabelElement.appendChild(jobLabelLinkElement);
@@ -143,7 +144,7 @@
     }
 
     function showFilterContainerElement() {
-        filterContainerElement.classList.remove("filter--hidden");
+        (filterContainerElement.classList.contains("filter--hidden")) ? filterContainerElement.classList.remove("filter--hidden") : null;
     }
 
     function hideFilterContainerElement() {
@@ -161,7 +162,7 @@
 
         labelLinkElement.textContent = label;
 
-        labelButtonElement.textContent = "X";
+        labelButtonElement.innerHTML = "&#10005;";
 
         function removeLabel() {
 
@@ -170,6 +171,8 @@
         labelButtonElement.addEventListener("click", removeLabel);
         
         labelContainerElement.append(labelLinkElement, labelButtonElement);
+
+        filterLabelsContainerElement.appendChild(labelContainerElement);
     }
 
 })();
