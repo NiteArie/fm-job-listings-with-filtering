@@ -150,4 +150,26 @@
         filterContainerElement.classList.add("filter--hidden");
     }
 
+    function addLabelToFilter(label) {
+        var labelContainerElement = document.createElement("li");
+        var labelLinkElement = document.createElement("a");
+        var labelButtonElement = document.createElement("button");
+
+        labelContainerElement.classList.add("filter__label");
+        labelLinkElement.classList.add("filter__link");
+        labelButtonElement.classList.add("filter__close");
+
+        labelLinkElement.textContent = label;
+
+        labelButtonElement.textContent = "X";
+
+        function removeLabel() {
+
+        }
+
+        labelButtonElement.addEventListener("click", removeLabel);
+        
+        labelContainerElement.append(labelLinkElement, labelButtonElement);
+    }
+
 })();
