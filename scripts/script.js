@@ -7,6 +7,7 @@
     const URL = "https://nitearie.github.io/fm-job-listings-with-filtering/data.json";
 
     var jobs = []
+    var filters = new Set();
 
     getJobs();
     
@@ -152,6 +153,13 @@
     }
 
     function addLabelToFilter(label) {
+    
+        if (!filters.has(label)) {
+            filters.add(label);
+        } else {
+            return;
+        }
+
         var labelContainerElement = document.createElement("li");
         var labelLinkElement = document.createElement("a");
         var labelButtonElement = document.createElement("button");
@@ -165,6 +173,16 @@
         labelButtonElement.innerHTML = "&#x2716;";
 
         function removeLabel() {
+
+            filters.delete(label);
+
+            this.removeEventListener("click", removeLabel);
+            
+            filterLabelsContainerElement.removeChild(this.parentElement);
+
+            if (!filterLabelsContainerElement.querySelectorAll(".filter__label").length) {
+                hideFilterContainerElement();
+            }
 
         }
 
