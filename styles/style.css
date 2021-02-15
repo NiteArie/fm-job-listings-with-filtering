@@ -73,6 +73,12 @@ body {
     background-color: hsl(180, 29%, 50%);
     color: white;
     border: 0;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+}
+
+.filter__close:hover {
+    background-color: hsl(180, 14%, 20%);
 }
 
 
