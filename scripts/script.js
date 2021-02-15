@@ -3,6 +3,7 @@
     const jobsContainerElement = document.querySelector(".jobs");
     const filterContainerElement = document.querySelector(".filter");
     const filterLabelsContainerElement = document.querySelector(".filter__labels");
+    const filterLabelsClearElement = document.querySelector(".filter__clear");
 
     const URL = "https://nitearie.github.io/fm-job-listings-with-filtering/data.json";
 
@@ -10,6 +11,15 @@
     var filters = new Set();
 
     getJobs();
+
+    filterLabelsClearElement.addEventListener("click", () => {
+
+        filters.clear();
+
+        filterLabelsContainerElement.textContent = "";
+
+        hideFilterContainerElement();
+    })
     
     function getJobs() {
         fetch(URL)
