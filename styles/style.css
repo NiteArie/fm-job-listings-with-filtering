@@ -97,7 +97,7 @@ body {
 
 .jobs {
     max-width: 1000px;
-    margin: 60px auto 100px;
+    margin: 80px auto 100px;
 }
 
 .job {
@@ -208,4 +208,22 @@ body {
 .job__link:hover {
     background-color: hsl(180, 29%, 50%);
     color: hsl(180, 31%, 95%);
+}
+
+@media all and (max-width: 900px) {
+    /* Filter */
+
+    .filter {
+        margin: 0 20px;
+        width: auto;
+    }
+
+    .filter__labels {
+        flex-wrap: wrap;
+    }
+    
+    .filter__label {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
