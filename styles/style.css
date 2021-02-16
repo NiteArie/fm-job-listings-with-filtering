@@ -97,7 +97,7 @@ body {
 
 .jobs {
     max-width: 1000px;
-    margin: 80px auto 100px;
+    margin: 80px auto 50px;
 }
 
 .job {
@@ -208,6 +208,18 @@ body {
 .job__link:hover {
     background-color: hsl(180, 29%, 50%);
     color: hsl(180, 31%, 95%);
+}
+
+/* Footer */
+
+.footer {
+    padding: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.footer a {
+    color: hsl(228, 45%, 44%);
 }
 
 @media all and (max-width: 900px) {
