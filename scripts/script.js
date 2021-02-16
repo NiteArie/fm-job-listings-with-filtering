@@ -21,6 +21,10 @@
         filterLabelsContainerElement.textContent = "";
 
         hideFilterContainerElement();
+
+        clearJobsContainerElement();
+
+        renderJobElements();
     })
     
     function getJobs() {
@@ -141,7 +145,7 @@
                     showFilterContainerElement();
                     addLabelToFilter(label);
                     filterJobs();
-                    clearJobs();
+                    clearJobsContainerElement();
                     renderFilteredJobElements();
                 })
 
@@ -204,11 +208,11 @@
 
             if (!filters.size) {
                 hideFilterContainerElement();
-                clearJobs();
+                clearJobsContainerElement();
                 renderJobElements();
             } else {
                 filterJobs();
-                clearJobs();
+                clearJobsContainerElement();
                 renderFilteredJobElements();
             }
 
@@ -222,7 +226,7 @@
         filterLabelsContainerElement.appendChild(labelContainerElement);
     }
 
-    function clearJobs() {
+    function clearJobsContainerElement() {
         jobsContainerElement.textContent = "";
     }
 
