@@ -226,4 +226,32 @@ body {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
+    /* Jobs */
+    
+    .jobs {
+        margin: 100px 20px;
+    }
+
+    .job {
+        flex-direction: column;
+        align-items: stretch;
+        
+    }
+
+    .job__about {
+        margin-bottom: 15px;
+    }
+
+    .job__labels {
+        flex: 1;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        border-top: 1px solid hsl(180, 14%, 20%);
+    }
+
+    .job__label {
+        margin-left: 0;
+        margin-right: 15px;
+    }
 }
