@@ -10,6 +10,8 @@
     var jobs = []
     var filters = new Set();
 
+    var filteredJobs = [];
+
     getJobs();
 
     filterLabelsClearElement.addEventListener("click", () => {
@@ -26,12 +28,19 @@
         .then(response => response.json())
         .then(data => {
             jobs = [...data];
+            filteredJobs = [...data];
             renderJobElements();
         })
     }
 
     function renderJobElements() {
         jobs.forEach((job) => {
+            jobsContainerElement.appendChild(createJobElements(job));
+        })
+    }
+
+    function renderFilteredJobElements() {
+        filteredJobs.forEach((job) => {
             jobsContainerElement.appendChild(createJobElements(job));
         })
     }
@@ -131,6 +140,9 @@
                 jobLabelLinkElement.addEventListener("click", () => {
                     showFilterContainerElement();
                     addLabelToFilter(label);
+                    filterJobs();
+                    clearJobs();
+                    renderFilteredJobElements();
                 })
 
                 jobLabelElement.appendChild(jobLabelLinkElement);
@@ -190,7 +202,7 @@
             
             filterLabelsContainerElement.removeChild(this.parentElement);
 
-            if (!filterLabelsContainerElement.querySelectorAll(".filter__label").length) {
+            if (!filters.size) {
                 hideFilterContainerElement();
             }
 
@@ -201,6 +213,34 @@
         labelContainerElement.append(labelLinkElement, labelButtonElement);
 
         filterLabelsContainerElement.appendChild(labelContainerElement);
+    }
+
+    function clearJobs() {
+        jobsContainerElement.textContent = "";
+    }
+
+    function filterJobs() {
+
+        filteredJobs = filteredJobs.filter(({ 
+            role,
+            level,
+            languages,
+            tools
+        }) => {
+            var labels = [role, level, ...languages, ...tools];
+
+            var filterLabelCounter = 0;
+            var neededFilterLabelCounter = filters.size;
+
+            for ( let label of filters) {
+                if (labels.includes(label)) {
+                    ++filterLabelCounter;
+                }
+            }
+
+            return filterLabelCounter == neededFilterLabelCounter;
+        })
+        
     }
 
 })();
