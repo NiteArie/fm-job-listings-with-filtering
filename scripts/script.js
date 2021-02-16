@@ -204,7 +204,14 @@
 
             if (!filters.size) {
                 hideFilterContainerElement();
+                clearJobs();
+                renderJobElements();
+            } else {
+                filterJobs();
+                clearJobs();
+                renderFilteredJobElements();
             }
+
 
         }
 
@@ -221,7 +228,7 @@
 
     function filterJobs() {
 
-        filteredJobs = filteredJobs.filter(({ 
+        filteredJobs = jobs.filter(({ 
             role,
             level,
             languages,
