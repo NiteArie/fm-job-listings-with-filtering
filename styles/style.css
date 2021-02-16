@@ -211,6 +211,13 @@ body {
 }
 
 @media all and (max-width: 900px) {
+
+    /* Header */
+
+    .header {
+        background-image: url("../images/bg-header-mobile.svg");
+    }
+
     /* Filter */
 
     .filter {
